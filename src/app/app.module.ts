@@ -14,7 +14,7 @@ import { PageheaderComponent } from './layout/pageheader/pageheader.component';
 import { MenuitemComponent } from './layout/menuitem/menuitem.component';
 
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
+import { MatButtonModule, } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -36,17 +36,23 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FooterComponent } from './layout/footer/footer.component';
 //import { FormComponent } from './form/form.component';
 import { ButtonComponent } from './components/button/button.component';
+import { LoginComponent } from './login/login.component';
 
 
 
 const routes: Routes = [
   {
-    path: '',
+    path:'',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'login'
+   
   },
   {
-    path: '',
+    path: 'login',    
+    component:LoginComponent
+  },
+  {
+    path: 'dashboard',
     component: LayoutComponent,
     children: [
       {
@@ -78,7 +84,8 @@ const routes: Routes = [
     MenuitemComponent,
     FooterComponent,
     //FormComponent,
-    ButtonComponent
+    ButtonComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

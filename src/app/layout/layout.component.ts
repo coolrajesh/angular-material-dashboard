@@ -53,7 +53,7 @@ export class LayoutComponent implements OnInit {
     {
       title: 'Home',
       icon: 'home',
-      link: '/home',
+      link: 'home',
       color: '#ff7f0e',
     },
     {
@@ -64,7 +64,7 @@ export class LayoutComponent implements OnInit {
         {
           title: 'Sales',
           icon: 'money',
-          link: '/sales',
+          link: 'sales',
           color: '#ff7f0e',
           // subMenu:[
           //   {
