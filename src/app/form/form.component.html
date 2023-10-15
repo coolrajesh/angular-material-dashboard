@@ -1,0 +1,134 @@
+<app-pageheader icon="home">
+    <h2>Home</h2>
+
+    <button
+      routerLink="/sales"
+      mat-flat-button
+      color="primary"
+      class="action"
+    >
+      <mat-icon class="mr-2">add</mat-icon>
+      <span>Create</span>
+    </button>
+  </app-pageheader>
+
+<div style="padding: 0 20px">
+  
+  <mat-card>
+        <mat-card-header>
+          <mat-card-title>Actions Buttons</mat-card-title>
+          <mat-card-subtitle>Start</mat-card-subtitle>
+        </mat-card-header>
+        <p>
+          <mat-form-field appearance="fill">
+            <mat-label>Fill form field</mat-label>
+            <input matInput placeholder="Placeholder">           
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Outline form field</mat-label>
+            <input matInput placeholder="Placeholder">            
+          </mat-form-field>
+        </p>
+  </mat-card>
+
+</div>
+<br>
+<div style="padding: 0 20px;">
+<mat-card>
+  
+        <div class="example-container">
+          <mat-form-field appearance="fill" class="width-50">
+            <mat-label>First Name</mat-label>
+            <input matInput>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill" class="width-50 ml-2">
+            <mat-label>Surname</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill" class="width-100">
+            <mat-label>Email address</mat-label>
+            <input matInput placeholder="Ex. pat@example.com">
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill" class="width-100">
+            <mat-label>Enter password</mat-label>
+            <input matInput>
+            <button mat-icon-button matSuffix  [attr.aria-label]="'Hide password'">
+           
+            </button>
+          </mat-form-field>
+          <br>
+          <label id="example-radio-group-label">Gender: </label>
+          <br><br>
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button value="1">Male</mat-radio-button>
+            <mat-radio-button class="example-radio-button" value="2">Female</mat-radio-button>
+            <mat-radio-button class="example-radio-button" value="3">Custom</mat-radio-button>
+          </mat-radio-group>
+          <br><br>
+          <label>Date Pickeer</label>
+          <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+   
+</mat-card>
+</div>
+<br>
+<div style="padding: 0 20px;">
+<mat-card>
+  <div class="login-container">
+    <div class="login-content">
+      <mat-toolbar class="login-toolbar" color="primary">REGISTER</mat-toolbar>
+      <mat-card>
+  
+        <!-- <form [formGroup]="registerForm" #formDirective="ngForm" 
+    (ngSubmit)="onSubmit(registerForm, formDirective)"> -->
+          <mat-form-field>
+            <mat-icon matPrefix>email</mat-icon>
+            <input autofocus type="email" matInput placeholder="Email *" formControlName="email">
+            <!-- <mat-error *ngIf="checkValidation('email')">
+              {{ emaiErrors() }}
+            
+            </mat-error> -->
+          </mat-form-field>
+  
+  
+          <mat-form-field>
+            <mat-icon matPrefix>person_outline</mat-icon>
+            <input autofocus type="text" matInput placeholder="Username *" formControlName="username">
+            <!-- <mat-error *ngIf="checkValidation('username')">
+              {{ fieldRequired }}
+            </mat-error> -->
+          </mat-form-field>
+  
+  
+          <mat-form-field>
+            <mat-icon matPrefix>lock_outline</mat-icon>
+            <input type="password" autocomplete="false" matInput placeholder="Password *" formControlName="password">
+            <!-- <mat-hint>Choose a password of at least eight characters, one uppercase letter and one number</mat-hint> -->
+        <!-- <mat-error *ngIf="checkValidation('password')">
+          {{ getErrorPassword() }}
+        </mat-error> -->
+          </mat-form-field>
+          
+    <hr>
+        <div class="socialMediaFlex">
+            <button style="width:50%" [disabled]="registerForm.invalid"    type="submit" mat-raised-button color="primary">Submit</button>
+        </div>
+        <!-- </form> -->
+      </mat-card>
+    </div>
+  </div>
+</mat-card>
+</div>
+ 
+       

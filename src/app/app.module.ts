@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import {FormBuilder, FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +27,17 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 import { FooterComponent } from './layout/footer/footer.component';
+//import { FormComponent } from './form/form.component';
+import { ButtonComponent } from './components/button/button.component';
+
+
 
 const routes: Routes = [
   {
@@ -46,6 +56,12 @@ const routes: Routes = [
       {
         path: 'sales',
         component: SalesComponent
+      },
+      {
+        path: 'dashboard',
+        //loadChildren:() => import('./form/form/form.module').then(m=>m.FormModule)
+        loadChildren: async () => (await import('./form/form/form.module')).FormModule,
+        //component: FormComponent
       }
     ]
   }
@@ -58,17 +74,20 @@ const routes: Routes = [
     SalesComponent,
     LayoutComponent,
     HeaderComponent,
-    PageheaderComponent,
+    //PageheaderComponent,
     MenuitemComponent,
-    FooterComponent
+    FooterComponent,
+    //FormComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-    MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule,
+    MatFormFieldModule, MatInputModule, MatDatepickerModule, MatNativeDateModule,MatGridListModule,
     FormsModule,
+    ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
@@ -77,8 +96,14 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MatProgressSpinnerModule,
     MatExpansionModule,
-    MatMenuModule
-
+    MatMenuModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    //MatIconModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

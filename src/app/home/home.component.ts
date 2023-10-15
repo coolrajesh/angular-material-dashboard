@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   //templateUrl: './home.component.html',
   template: `
-  <app-pageheader icon="home">
+  <!-- <app-pageheader icon="home"> -->
     <h2>Home</h2>
 
     <button
@@ -16,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
       <mat-icon class="mr-2">add</mat-icon>
       <span>New sale</span>
     </button>
-  </app-pageheader>
+  <!-- </app-pageheader> -->
 
   <div style="padding: 0 20px">
     Hello from Home
