@@ -37,6 +37,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 //import { FormComponent } from './form/form.component';
 import { ButtonComponent } from './components/button/button.component';
 import { LoginComponent } from './login/login.component';
+//import { ViewComponent } from './admin/category/view/view.component';
 
 
 
@@ -68,6 +69,12 @@ const routes: Routes = [
         //loadChildren:() => import('./form/form/form.module').then(m=>m.FormModule)
         loadChildren: async () => (await import('./form/form/form.module')).FormModule,
         //component: FormComponent
+      },
+      {
+        path: 'category',
+        //loadChildren:() => import('./form/form/form.module').then(m=>m.FormModule)
+        loadChildren: async () => (await import('./admin/category/category.module')).CategoryModule,
+        //component: FormComponent
       }
     ]
   }
@@ -85,7 +92,8 @@ const routes: Routes = [
     FooterComponent,
     //FormComponent,
     ButtonComponent,
-    LoginComponent
+    LoginComponent,
+    
   ],
   imports: [
     BrowserModule,

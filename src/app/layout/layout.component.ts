@@ -32,24 +32,39 @@ export class LayoutComponent implements OnInit {
     this.opened = !this.opened;
   }
 
-  // menu: Menu = [
-  //   {
-  //         title: 'Dashboard',
-  //         icon: 'home',
-  //         link: '/home',
-  //         color: '#ff7f0e',
-  //   },
-
-  //   {
-  //       title: 'Form',
-  //       icon: 'track_changes',
-  //       link: '/dashboard/form',
-  //       color: '#ff7f0e',
-  //   },
-
-  // ]
-
   menu: Menu = [
+    {
+          title: 'Dashboard',
+          icon: 'home',
+          link: '/home',
+          color: '#ff7f0e',
+    },
+
+    {
+      title: 'Category',
+      icon: 'home',
+      link: '/home',
+      color: '#ff7f0e',
+      subMenu:[
+        {
+          title: 'view',
+          icon: 'money',
+          link: 'category/view',
+          color: '#ff7f0e',
+        }
+      ]
+    },
+
+    // {
+    //     title: '',
+    //     icon: 'track_changes',
+    //     link: '/dashboard/form',
+    //     color: '#ff7f0e',
+    // },
+
+  ]
+
+  menu1: Menu = [
     {
       title: 'Home',
       icon: 'home',

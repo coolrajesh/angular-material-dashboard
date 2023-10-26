@@ -13,7 +13,7 @@ import {
       <button (click)="menuToggled.emit(true)" mat-icon-button>
         <mat-icon>menu</mat-icon>
       </button>
-      <span class="title" routerLink="/">Dashboard</span>
+      <span class="title" routerLink="/">Dashboards</span>
       <span class="spacer"></span>
       <span class="welcome-text">Hello {{ user }}</span>
       <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -24,7 +24,7 @@ import {
           <span>Logout</span>
         </button>
       </mat-menu>
-    </mat-toolbar>
+    </mat-toolbar>    
   `,
   styles: [
     `
