@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormBuilder, FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -46,6 +47,7 @@ const routes: Routes = [
     path:'',
     pathMatch: 'full',
     redirectTo: 'login'
+    //redirectTo: 'dashboard/category/view'
    
   },
   {
@@ -118,6 +120,7 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    HttpClientModule
     //MatIconModule    
   ],
   providers: [],

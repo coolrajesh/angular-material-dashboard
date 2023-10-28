@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService} from '../../../services/api-service.service';
 
 @Component({
   selector: 'app-view',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiservice:ApiServiceService) { }
 
   ngOnInit(): void {
+    //console.log(this.apiservice.getPosts());
+    this.apiservice.getPosts().subscribe((data: any[]) => {
+      console.log(data);
+    });
   }
 
 }
